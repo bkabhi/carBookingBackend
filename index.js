@@ -20,6 +20,7 @@ connectToDatabase(mongoUri).then((res) => {
 app.use(express.json());
 
 // Routes
+app.get("/", (req, res) => res.send("Express on Vercel"));
 app.use('/api', bookingRoutes);
 
 // Start the server
